@@ -177,7 +177,12 @@ section {
    justify-content: center;
    align-items: center;
 }
-
+.is-pc{
+  display: flex;
+}
+.is-sp{
+  display: none;
+}
 /************************************
 ヘッダー
 ************************************/
