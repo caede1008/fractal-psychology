@@ -1,0 +1,579 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+div,
+span,
+img,
+a,
+table,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  font-size: 16px;
+}
+
+header,
+footer,
+nav,
+section,
+article,
+main,
+aside,
+figure,
+figcaption {
+  display: block;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+  cursor: pointer;
+}
+
+a:hover {
+  color: inherit;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+
+.fade-in.delay {
+  transition-delay: 0.5s;
+}
+.fade-in-voice {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-voice.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/************************************
+共通設定
+************************************/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans JP";
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  background-color: rgba(255, 255, 255, 1);
+  width: 90%;
+  margin: 0 auto;
+  max-width: 960px;
+  color: #575757;
+}
+section {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 5% 0%;
+}
+.section-title,
+.reservation-text {
+  color: #00b1b6;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3%;
+  letter-spacing: 0.2rem;
+}
+.section-title img {
+  margin-right: 2%;
+}
+.section-sub-title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.section-title-box,
+.reservation-text {
+  background-color: white;
+  padding: 0.5% 1%;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+.pink__button {
+  background-color: #ffa1c1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 1%;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.pink__button img {
+  width: 7%;
+  margin-right: 3%;
+}
+.pink__button:hover {
+  box-shadow: none;
+  top: 2px;
+  left: 2px;
+  opacity: 1;
+}
+.pink__button a {
+  text-align: center;
+  display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/************************************
+ヘッダー
+************************************/
+#header {
+  margin: 0 auto;
+  height: 3rem;
+  max-width: 960px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 0%;
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.header__left {
+  width: 35%;
+}
+.header__button {
+  width: 25%;
+}
+/* メインビジュアル */
+.mainvisual {
+  max-width: 100%;
+  padding-bottom: 0;
+  padding-top: 3.5rem;
+}
+/************************************
+特典
+************************************/
+.benefit {
+  background-image: url("./img/24157182.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.benefit-box {
+  width: 75%;
+  margin: 5% auto;
+  position: relative;
+}
+.benefit-box img:nth-child(1) {
+  padding: 3.1%;
+}
+.ribon {
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/************************************
+小予約セクション
+************************************/
+.benefit {
+  background-image: url("./img/24157182.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.reservation-text {
+  width: 67%;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 10% auto;
+  position: relative;
+  z-index: 1;
+}
+/************************************
+体験者の声
+************************************/
+.reservation {
+  background-image: url("./img/yoyaku-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+.reservation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(164, 239, 254, 0.5);
+  z-index: 0;
+}
+.reservation .pink__button {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35%;
+  z-index: 1;
+}
+
+.voice-container {
+  display: flex;
+  justify-content: space-around;
+}
+.voice-box {
+  width: calc(100% / 3);
+  margin: 1%;
+  background: linear-gradient(
+    -45deg,
+    rgba(188, 253, 255, 1),
+    rgba(252, 255, 255, 1),
+    rgba(188, 253, 255, 1)
+  );
+  border: solid 2px #00b1b6;
+  border-radius: 16px;
+}
+.voice-box img {
+  border-radius: 16px 16px 0 0;
+}
+.voice-box-description {
+  margin: 5% 10%;
+}
+.voice-box-description p {
+  color: #ffa1c1;
+}
+.voice-box-title {
+  font-weight: bold;
+  text-align: center;
+  margin: 5%;
+}
+/************************************
+ご予約
+************************************/
+.calender p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.calender iframe {
+  display: block;
+  margin: 3% auto;
+  width: 100%;
+  height: 1120px;
+}
+
+/************************************
+よくある質問
+************************************/
+.qa-box {
+  border: solid 2px rgba(188, 253, 255, 1);
+  border-radius: 5px;
+  height: 4rem;
+}
+.qa-title {
+  background-color: rgba(188, 253, 255, 1);
+  width: 15%;
+  height: 100%;
+  font-size: 1.5rem;
+  color: rgba(0, 177, 182, 1);
+  padding-top: 1%;
+  text-align: center;
+  border-radius: 5px 0 0 5px;
+}
+.qa-container {
+  width: 100%;
+}
+.q-text,
+.answer {
+  width: 85%;
+  padding-left: 2%;
+}
+.a-title {
+  background-color: rgba(255, 179, 205, 1);
+  width: 15%;
+  height: 100%;
+  font-size: 1.5rem;
+  color: rgba(252, 255, 255, 1);
+  padding-top: 1%;
+  text-align: center;
+  border-radius: 5px 0 0 5px;
+}
+.q-box {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.a-box {
+  display: flex;
+  align-items: center;
+  margin: 2% 0;
+}
+.qa-box {
+  display: flex;
+  align-items: center;
+  margin: 2% 0;
+}
+.q-box:hover{
+  opacity: 0.6;
+}
+.a-box {
+  border: solid 2px rgba(255, 179, 205, 1);
+  display: none;
+  border-radius: 5px;
+  flex-direction: row;
+}
+
+/************************************
+Ipad
+************************************/
+
+/************************************
+Pro Max
+************************************/
+footer {
+  height: 50px;
+  background-color: rgba(188, 253, 255, 1);
+  color: #00b1b6;
+}
+footer p {
+  text-align: center;
+  padding: 1.6%;
+}
+/* タブレット用（769px〜1024px） */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .voice-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .voice-box {
+    width: 90%;
+  }
+  .voice-box img {
+    width: 100%;
+  }
+  .pink__button {
+    font-size: 1rem;
+    width: 20%;
+  }
+  .mainvisual{
+    width: 95%;
+  }
+  #header {
+    padding: 2% 5%;
+  }
+  .section-title img{
+    width: 5%;
+  }
+  .section-title-box, .reservation-text{
+    font-size: 1.2rem;
+  }
+  .voice-box-title{
+    font-size: 1.2rem;
+  }
+}
+/* スマートフォン用（～768px） */
+@media screen and (max-width: 769px) {
+  .section-title-box, .reservation-text{
+    font-size: 1.2rem;
+  }
+  .mainvisual{
+    width: 95%;
+  }
+  .section-title img{
+    width: 5%;
+  }
+  .voice-box-title{
+    font-size: 1.2rem;
+  }
+  body {
+    width: 100%;
+  }
+  header,
+  .voice,
+  .calender,
+  .questions,{
+    width: 95%;
+  }
+  #header {
+    padding: 2% 5%;
+  }
+  .voice-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .voice-box {
+    width: 90%;
+  }
+  .voice-box img {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+  .reservation-text {
+    font-size: 1rem;
+  }
+  .section-sub-title {
+    font-size: 0.9rem;
+    padding: 4%;
+  }
+  .pink__button {
+    font-size: 0.9rem;
+  }
+  .reservation .pink__button {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    z-index: 1;
+  }
+  .calender p {
+    font-size: 0.9rem;
+  }
+  .qa-container {
+    font-size: 0.8rem;
+  }
+  .a-title,
+  .qa-title {
+    padding-top: 3%;
+  }
+  .ribon {
+    width: 80%;
+  }
+  .calender iframe {
+    height: 80vh;
+    max-height: 550px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .is-pc{
+    display: none;
+  }
+  .is-sp{
+    display: flex;
+  }
+  .header__button{
+    width: 35%;
+  }
+  .pink__button img {
+    width: 10%;
+    margin-right: 5%;
+  }
+  .pink__button{
+    font-size: 0.8rem;
+  }
+  .header__left{
+    width: 45%;
+  }
+  .section-title-box, .reservation-text{
+    font-size: 1rem;
+  }
+  .reservation-text{
+    width: 90%;
+    padding: 2%;
+    font-size: 0.8rem;
+  }
+  .benefit-box{
+    width: 95%;
+  }
+  .section-title{
+    font-size: 1rem;
+  }
+  .voice-box-title{
+    font-size: 1rem;
+  }
+  .voice-box-description{
+    font-size: 0.8rem;
+  }
+  .qa-container{
+    width: 95%;
+    margin: 0 auto;
+  }
+  .qa-title{
+    padding-top: 0px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainvisual{
+    width: 100%;
+  }
+  footer{
+    height: auto;
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+    justify-content: center;
+    padding: 2%;
+  }
+}
